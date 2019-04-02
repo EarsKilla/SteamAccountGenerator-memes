@@ -1,0 +1,24 @@
+{
+  "updates": {
+    "stable": {
+      "major": 1,
+      "minor": 1,
+      "build": 1,
+      "download": {
+        "windows": "https://github.com/EarsKilla/Steam-Account-Generator/releases/download/v1.1.1/Release-windows.zip"
+      }
+    },
+    "pre": {
+      "major": 1,
+      "minor": 1,
+      "build": 1,
+      "pre": 3,
+      "download": {
+        "windows": "https://github.com/EarsKilla/Steam-Account-Generator/releases/download/v1.1.2-pre3/Pre-Release-windows.zip"
+      }
+    }
+  },
+  "misc": {
+    "mail_box_url": "https://newemailsrv.now.sh/index.php"
+  }
+}
