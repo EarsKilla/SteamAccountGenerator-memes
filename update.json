@@ -13,10 +13,10 @@
       "major": 1,
       "minor": 1,
       "build": 2,
-      "pre": 4,
-      "notes": "https://github.com/EarsKilla/Steam-Account-Generator/releases/tag/v1.1.2-pre4",
+      "pre": 5,
+      "notes": "https://github.com/EarsKilla/Steam-Account-Generator/releases/tag/v1.1.2-pre5",
       "download": {
-        "windows": "https://github.com/EarsKilla/Steam-Account-Generator/releases/download/v1.1.2-pre4/Pre-Release-windows.zip"
+        "windows": "https://github.com/EarsKilla/Steam-Account-Generator/releases/download/v1.1.2-pre5/Pre-Release-windows.zip"
       }
     }
   },
