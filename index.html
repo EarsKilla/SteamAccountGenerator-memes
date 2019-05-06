@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <title>Steam Account Generator</title>
+
+    <link rel="canonical" href="#">
+
+    <!-- Bootstrap core CSS -->
+<link href="./index_files/bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="./index_files/cover.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand">Steam Account Generator</h3>
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link active" href="#">Download</a>
+        <a class="nav-link" href="https://github.com/EarsKilla/Steam-Account-Generator/issues" target="_blank">Issues</a>
+        <a class="nav-link" href="https://github.com/EarsKilla/Steam-Account-Generator/releases">Releases</a>
+        <a class="nav-link" href="https://discord.gg/R96F2DA" target="_blank">Discord</a>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main" class="inner cover">
+    <h1 class="cover-heading">Download</h1>
+    <p class="lead">
+      <a href="#" class="btn btn-lg btn-success" id="dl_stable">Stable</a>
+      <a href="#" class="btn btn-lg btn-info" id="notes_stable">Notes</a>
+    </p>
+    <p class="lead">
+      <a href="#" class="btn btn-lg btn-danger" id="dl_pre">Pre-release</a>
+      <a href="#" class="btn btn-lg btn-info" id="notes_pre">Notes</a>
+    </p>
+  </main>
+  
+  <script>  
+  var getJSON = function(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'json';
+    xhr.onload = function() {
+      var status = xhr.status;
+      if (status === 200) {
+        callback(null, xhr.response);
+      } else {
+        callback(status, xhr.response);
+      }
+    };
+    xhr.send();
+  };
+  
+  getJSON('./update.json', function(status, data) {
+    console.log(data);
+	
+	var dlStable = document.getElementById('dl_stable');
+	var nsStable = document.getElementById('notes_stable');
+	var infoStable = data.updates.stable;	
+	dlStable.setAttribute('href', infoStable.download.windows);
+	dlStable.innerHTML += ' ' + infoStable.major + '.' + infoStable.minor + '.' + infoStable.build;
+	nsStable.setAttribute('href', infoStable.notes);
+	
+	var dlPre = document.getElementById('dl_pre');
+	var nsPre = document.getElementById('notes_pre');
+	var infoPre = data.updates.pre;
+	dlPre.setAttribute('href', infoPre.download.windows);
+	dlPre.innerHTML += ' ' + infoPre.major + '.' + infoPre.minor + '.' + infoPre.build + '-pre' + infoPre.pre;
+	nsPre.setAttribute('href', infoPre.notes);
+  });
+  </script>
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p>Forked from <a href="https://github.com/Ashesh3/Steam-Account-Generator" target="_blank">Ashesh3/Steam-Account-Generator</a> by <a href="https://github.com/EarsKilla/" target="_blank">EarsKilla</a>.</p>
+    </div>
+  </footer>
+</div>
+
+
+</body></html>
