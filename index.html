@@ -53,8 +53,8 @@
       <a href="#" class="btn btn-lg btn-info" id="notes_stable">Notes</a>
     </p>
     <p class="lead">
-      <a href="#" class="btn btn-lg btn-danger" id="dl_pre">Pre-release</a>
-      <a href="#" class="btn btn-lg btn-info" id="notes_pre">Notes</a>
+      <a href="#" class="btn btn-lg btn-danger" id="dl_dev">[DEV] release</a>
+      <a href="#" class="btn btn-lg btn-info" id="notes_dev">Notes</a>
     </p>
   </main>
   
@@ -73,23 +73,23 @@
     };
     xhr.send();
   };
+	  
+  updateButton(notes, download, updateData) {
+    notes.setAttribute('href', updateData.notes);
+    download.setAttribute('href', updateData.download.windows);
+    download.innerHTML += ' ' + updateData.major + '.' + updateData.minor + '.' + updateData.build;
+  }
   
   getJSON('./update.json', function(status, data) {
     console.log(data);
 	
 	var dlStable = document.getElementById('dl_stable');
 	var nsStable = document.getElementById('notes_stable');
-	var infoStable = data.updates.stable;	
-	dlStable.setAttribute('href', infoStable.download.windows);
-	dlStable.innerHTML += ' ' + infoStable.major + '.' + infoStable.minor + '.' + infoStable.build;
-	nsStable.setAttribute('href', infoStable.notes);
+	updateButton(nsStable, dlStable, data.updates.stable);
 	
-	var dlPre = document.getElementById('dl_pre');
-	var nsPre = document.getElementById('notes_pre');
-	var infoPre = data.updates.pre;
-	dlPre.setAttribute('href', infoPre.download.windows);
-	dlPre.innerHTML += ' ' + infoPre.major + '.' + infoPre.minor + '.' + infoPre.build + '-pre' + infoPre.pre;
-	nsPre.setAttribute('href', infoPre.notes);
+	var dlDev = document.getElementById('dl_dev');
+	var nsDev = document.getElementById('notes_dev');
+	updateButton(nsDev, dlDev, data.updates.pre);
   });
   </script>
 
