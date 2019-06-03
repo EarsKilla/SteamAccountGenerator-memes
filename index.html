@@ -74,7 +74,7 @@
     xhr.send();
   };
 	  
-  updateButton(notes, download, updateData) {
+  var updateButton = function(notes, download, updateData) {
     notes.setAttribute('href', updateData.notes);
     download.setAttribute('href', updateData.download.windows);
     download.innerHTML += ' ' + updateData.major + '.' + updateData.minor + '.' + updateData.build;
