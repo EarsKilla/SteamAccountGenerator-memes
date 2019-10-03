@@ -4,9 +4,9 @@
       "major": 1,
       "minor": 1,
       "build": 3,
-      "notes": "https://github.com/EarsKilla/Steam-Account-Generator/releases/tag/v1.1.3.2",
+      "notes": " https://github.com/steam-account-creator/Steam-Account-Generator/releases/tag/v1.1.3.2",
       "download": {
-        "windows": "https://github.com/EarsKilla/Steam-Account-Generator/releases/download/v1.1.3.2/Release-windows-1.1.3.2.zip"
+        "windows": "https://github.com/steam-account-creator/Steam-Account-Generator/releases/download/v1.1.3.2/Release-windows-1.1.3.2.zip"
       }
     },
     "pre": {
@@ -14,9 +14,9 @@
       "minor": 0,
       "build": 1,
       "pre": 1337,
-      "notes": "https://github.com/EarsKilla/Steam-Account-Generator/releases/tag/v2.0.1",
+      "notes": "https://github.com/steam-account-creator/Steam-Account-Generator/releases/tag/v2.1.0",
       "download": {
-        "windows": "https://github.com/EarsKilla/Steam-Account-Generator/releases/download/v2.0.1/Release-windows-2.0.1.zip"
+        "windows": "https://github.com/steam-account-creator/Steam-Account-Generator/releases/download/v2.1.0/DEV-windows-2.1.0.zip"
       }
     }
   },
