@@ -11,12 +11,12 @@
     },
     "pre": {
       "major": 2,
-      "minor": 0,
+      "minor": 1,
       "build": 1,
       "pre": 1337,
-      "notes": "https://github.com/steam-account-creator/Steam-Account-Generator/releases/tag/v2.1.0",
+      "notes": "https://github.com/steam-account-creator/Steam-Account-Generator/releases/tag/v2.1.1",
       "download": {
-        "windows": "https://github.com/steam-account-creator/Steam-Account-Generator/releases/download/v2.1.0/DEV-windows-2.1.0.zip"
+        "windows": "https://github.com/steam-account-creator/Steam-Account-Generator/releases/download/v2.1.1/DEV-windows-2.1.1.zip"
       }
     }
   },
